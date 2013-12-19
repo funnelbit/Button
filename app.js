@@ -28,11 +28,12 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-
+var button = require('./routes/index');
 var create = require('./routes/create');
 var settings = require('./routes/settings');
 
-app.get('/', routes.index);
+app.get('/', button.index);
+app.post('/', button.increment);
 app.get('/create', create.page);
 app.get('/settings', settings.page);
 

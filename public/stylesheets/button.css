@@ -1,26 +1,47 @@
 body {
     text-align: center;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
 }
-#button {
+#button-section {
     margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     width: 200px;
     height: 200px;
+}
+
+#button {
+    width: 200px;
+    height: 200px;
     border-radius: 10px;
+    box-shadow: 0px 0px 3px 0px #aaaaaa;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 #button: active {
     box-shadow: 0px 0px 3px 0px #aaaaaa;
 }
 
+#button-title {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 #counter {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100px;
-    height: 100px;
+    margin-top: 10px;
+    width: 180px;
     font-size: 40px;
     padding: 10px;
     border: solid 1px #aaaaaa;
     border-radius: 10px;
+}
+
+#url {
+    width: 400px;
+    padding: 6px;
+    font-size: 12px;
+    border: solid 1px #aaaaaa;
+    border-radius: 5px;
 }

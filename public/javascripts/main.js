@@ -1,5 +1,7 @@
 $(document).on('ready', function () {
 
+    $('#url').val(location.href + '?frame');
+
     $('#button').on('mouseup', function () {
 
         var audio_uri = $($(this).find('audio')).attr('src');
@@ -8,9 +10,16 @@ $(document).on('ready', function () {
             audio.play();
 
         var counter = $('#counter');
-        var count = counter.text();
-        count++;
 
-        counter.text(count);
+        $.ajax({
+            type: "POST",
+            url: "/",
+            data: "",
+            success: function(msg){
+                //alert( "Data Saved: " + msg );
+                counter.text(msg.count);
+            }
+        });
+
     });
 });

@@ -1,6 +1,5 @@
-<div style="background-image: url('<%- button.image %>')">
-  <h1><%= button.title %></h1>
-  <input type='button' />
+<div id="button" style="background-image: url('<%- button.image %>'); background-size: contain">
+  <div id="button-title"><%= button.title %></div>
   <audio src=<%- button.sound %>></audio>
 </div>
-<div class='button-counter'>0</div>
+<div id='counter'><%= button.count %></div>
